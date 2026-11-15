@@ -144,6 +144,25 @@ h5{font-size:14.5px;display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .stay-head .ic{color:var(--gold)}
 .stay-item p{font-size:13px;color:var(--t2);margin:8px 0}
 
+
+/* ===== 每日吃住 & 景点折叠 ===== */
+.fs-block{margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.fs-block h5{font-size:14px;margin-bottom:8px}
+.food-day{list-style:none}
+.food-day li{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;font-size:13px;color:var(--t1);padding:5px 0;border-bottom:1px dashed var(--border)}
+.food-day li:last-child{border-bottom:none}
+.food-day .meal{flex:none;font-size:11.5px;font-weight:800;color:var(--gold);background:rgba(181,138,62,.13);border-radius:999px;padding:2px 8px}
+.food-day .fp{margin-left:auto;font-size:11.5px;font-weight:800;color:var(--red);white-space:nowrap}
+.stay-day b{color:var(--t1);font-size:13px}
+.p-score{font-size:11px;font-weight:800;color:var(--gold);background:rgba(181,138,62,.13);border-radius:999px;padding:2px 8px;margin-left:6px;white-space:nowrap}
+.stay-day p{font-size:12.5px;color:var(--t2);margin:4px 0 8px}
+.stay-day .alt{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);margin-bottom:0}
+.spot-more{margin-top:14px;background:rgba(178,58,46,.05);border-color:rgba(178,58,46,.22)}
+.spot-more summary{color:var(--red);font-weight:800;font-size:13.5px;padding:12px 16px}
+.spot-detail h6{font-size:13px;color:var(--t1);margin:12px 0 4px;display:flex;align-items:center;gap:6px}
+.spot-detail h6:first-child{margin-top:4px}
+.spot-detail p,.spot-detail li{font-size:12.5px;color:var(--t2);line-height:1.7}
+.spot-detail ul{margin:0;padding-left:18px}
 /* 花费 */
 .cost-grid{display:grid;gap:10px;margin-top:6px}
 .cost-row{display:flex;justify-content:space-between;gap:10px;background:var(--surface);border-radius:10px;padding:11px 14px;font-size:13.5px;border:1px solid var(--border)}
@@ -192,8 +211,6 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
       <a href="#day3">DAY 3</a>
       <a href="#day4">DAY 4</a>
       <a href="#changbai">长白山</a>
-      <a href="#foods">美食</a>
-      <a href="#stays">住宿</a>
       <a href="#cost">花费</a>
     </div>
   </div>
@@ -313,6 +330,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
         <li><span class="t-time">Day 3</span><span class="t-dot"></span><p>珲春→图们 口岸界桥 → 返回延吉</p></li>
         <li><span class="t-time">Day 4</span><span class="t-dot"></span><p>帽儿山/民俗园 → 采购伴手礼 → 返程</p></li>
       </ul>
+      <p class="notice">住宿安排：延吉 2 晚（Day1、Day3）+ 珲春 1 晚（Day2），预算均按 300-400 元/晚推荐，详见各日卡片「今晚住宿」；Day4 当晚返程不安排住宿。</p>
       <p class="notice">海拔说明：延吉、珲春、图们城区海拔约 150-250 米，属低海拔，无高反风险。若延伸去长白山天池（海拔约 2189 米），需注意防寒与缓步登山（见文末「长白山延伸」）。</p>
     </div>
   </div>
@@ -340,7 +358,28 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <li><span class="t-time">17:30</span><span class="t-dot"></span><p>晚餐：韩式烤肉 或 顺姬/金达莱冷面</p></li>
           <li><span class="t-time">19:30</span><span class="t-dot"></span><p>延吉夜景散步，朝鲜族风情街/人民公园周边</p></li>
         </ul>
-        <div class="pit-box">
+        
+        <div class="fs-block">
+          <h5>🍜 本日美食 <span class="ai-est" style="margin-left:auto">2026-11 实时价</span></h5>
+          <ul class="food-day">
+            <li><span class="meal">午餐</span>服务大楼冷面（百利城店）· 现压荞麦面始自 1958 年，配锅包肉一绝<span class="fp">¥36/人</span></li>
+            <li><span class="meal">晚餐</span>丰茂烤串（全国首店）· 招牌苏尼特羊肉串，三十多年老店<span class="fp">¥70/人</span></li>
+            <li><span class="meal">夜宵</span>正谈炸鸡 · 外皮酥脆，旺季排队久建议错峰<span class="fp">¥40/人</span></li>
+            <li><span class="meal">甜点</span>后浪咖啡 · 韩式 Ins 风，逛吃路上歇脚<span class="fp">¥24/杯</span></li>
+          </ul>
+          <p class="src-note">价位核验：携程美食 2026-11-10 实时价 · 部分店饭点需排队，17:30 前或 20:00 后错峰</p>
+        </div>
+        <div class="fs-block">
+          <h5>🏨 今晚住宿 <span class="ai-est" style="margin-left:auto">预算 ¥300-400/晚</span></h5>
+          <div class="stay-day">
+            <b>主推 · 花笙·设计师酒店（延边大学民俗园店）</b><span class="p-score">4.8 分</span>
+            <p>近网红墙与西市场，拍照出片、智能客控，下楼即大学城美食街。</p>
+            <b>备选 · 栀子·艺术酒店（网红墙店）</b><span class="p-score">4.8 分</span>
+            <p>近延吉百货大楼，民俗特色风情、机器人服务。</p>
+            <p class="alt">💰 均约 ¥300-400/晚；旺季提前 2 周、非旺季提前 3 天预订（2026-08 实测攻略）。</p>
+          </div>
+        </div>
+<div class="pit-box">
           <h5>⚠️ 坑点提醒</h5>
           <ul>
             <li>· 网红墙建议傍晚亮灯后去，白天观感一般</li>
@@ -371,7 +410,24 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <div class="kv"><span>开放</span><b>全天（建议傍晚亮灯后）</b></div>
           <div class="kv"><span>看点</span><b>中朝双语霓虹招牌墙，延吉最具辨识度的打卡地，晚上灯光最出片。</b></div>
           <div class="kv"><span>预约</span><b>无需预约</b></div>
-          <div class="tip"><span>旁边大学城一楼很多韩式小吃店，可顺路解决早/晚餐。</span></div>
+          <div class="tip"><span>旁边大学城一楼很多韩式小吃店，可顺路解决早/晚餐。</span>
+          <details class="spot-more">
+            <summary>展开详细攻略 <svg class="chev ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+            <div class="d-body spot-detail">
+              <h6>🔍 深度看点</h6>
+              <p>延吉最具辨识度的地标：延边大学是全国唯一的朝鲜族重点高校，正门对面大学城建筑外墙布满中朝双语霓虹招牌，入夜后「小首尔」氛围感拉满，是延吉免费街区里出片率最高的一处。</p>
+              <h6>📷 拍照打卡点</h6>
+              <ul>
+                <li>网红墙正面人行道：广角竖拍整面弹幕墙，18:30 亮灯后最佳</li>
+                <li>延边大学正门：校名霓虹与「大学城」招牌同框</li>
+                <li>路口斑马线：等红灯抓拍人流与霓虹背景</li>
+              </ul>
+              <h6>🍜 周边美食</h6>
+              <p>大学城一楼小吃（土豆饼、炸串、奶油米酒）、丰茂烤串全国首店、后浪咖啡，晚餐夜宵一站解决。</p>
+              <h6>🗺 游览动线</h6>
+              <p>16:00 后到 → 大学城美食街逛吃 → 等天黑亮灯 → 网红墙拍照约 30 分钟 → 步行布尔哈通河 / 人民公园夜游收尾。</p>
+            </div>
+          </details></div>
         </div>
       </article>
     </div>
@@ -392,7 +448,27 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <li><span class="t-time">15:00</span><span class="t-dot"></span><p>返珲春市区（路上可停圈河口岸打卡）</p></li>
           <li><span class="t-time">17:30</span><span class="t-dot"></span><p>珲春晚餐：帝王蟹/俄罗斯海鲜 + 珲春烧烤</p></li>
         </ul>
-        <div class="pit-box">
+        
+        <div class="fs-block">
+          <h5>🍜 本日美食 <span class="ai-est" style="margin-left:auto">2026-11 实时价</span></h5>
+          <ul class="food-day">
+            <li><span class="meal">午餐</span>珲春市区朝鲜族简餐 · 荞麦冷面 / 土豆饺子 / 石锅拌饭<span class="fp">¥20-40</span></li>
+            <li><span class="meal">晚餐</span>「蟹」逅珲春海鲜街 · 帝王蟹现捞现做，比一线城市省约 60%<span class="fp">¥120-160/斤</span></li>
+            <li><span class="meal">夜宵</span>汉唐街夜市 · 珲春大串、土豆饼、年糕串<span class="fp">¥30-60</span></li>
+          </ul>
+          <p class="src-note">价位核验：珲春市政府文旅报道 2026-08 + 2026-06 探店测评；点帝王蟹先问清称重与加工费</p>
+        </div>
+        <div class="fs-block">
+          <h5>🏨 今晚住宿 <span class="ai-est" style="margin-left:auto">预算 ¥300-400/晚</span></h5>
+          <div class="stay-day">
+            <b>主推 · 如家精选·珲春商业中心海鲜街店</b><span class="p-score">5.0 分</span>
+            <p>2026-07 新开业，近海鲜街与欧式街，商务大床 ¥219 起、家庭房 ¥299。</p>
+            <b>备选 · 如家睿柏·云酒店（口岸大路店）</b><span class="p-score">4.8 分</span>
+            <p>近哇斯托克欢乐岛，自助早餐丰富、机器人服务，¥199-399。</p>
+            <p class="alt">💰 官方实时价（首旅如家官网 2026-11）；9-11 月帝王蟹旺季海鲜街越晚越热闹。</p>
+          </div>
+        </div>
+<div class="pit-box">
           <h5>⚠️ 坑点提醒</h5>
           <ul>
             <li>· 珲春到防川无公共交通直达，务必提前约好包车/租车</li>
@@ -420,11 +496,28 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <div class="eyebrow">我国唯一 中·朝·俄 三国交界</div>
           <h4>防川 · 一眼望三国</h4>
           <p class="addr">📍 珲春市敬信镇防川村（市区东南约 70km）<a class="loc-link" href="https://uri.amap.com/marker?position=130.87,42.425&name=防川景区" target="_blank" rel="noopener">查看位置</a></p>
-          <div class="kv"><span>门票</span><b>景区购票（出行前确认票价与开放）</b></div>
-          <div class="kv"><span>开放</span><b>日间开放，冬季提前闭园（出行前确认）</b></div>
+          <div class="kv"><span>门票</span><b>景区联票约几十至百余元（2026-10 实测，以现场公示为准）</b></div>
+          <div class="kv"><span>开放</span><b>约 8:00-17:00，冬季 / 大风天可能提前闭园（出行前确认）</b></div>
           <div class="kv"><span>看点</span><b>龙虎阁观景台远眺中朝俄三国边境、图们江入海口的辽阔与俄朝铁路大桥，地理意义独一无二。</b></div>
           <div class="kv"><span>交通</span><b>包车/自驾前往（无直达公交）</b></div>
-          <div class="tip"><span>11 月风大且冷，登观景台注意保暖；顺路可打卡圈河口岸。</span></div>
+          <div class="tip"><span>11 月风大且冷，登观景台注意保暖；顺路可打卡圈河口岸。</span>
+          <details class="spot-more">
+            <summary>展开详细攻略 <svg class="chev ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+            <div class="d-body spot-detail">
+              <h6>🔍 深度看点</h6>
+              <p>我国唯一的中朝俄三国交界处：龙虎阁观景台可同时望见左侧朝鲜丘陵、右侧俄罗斯村舍与图们江入海口，地理意义独一无二；土字牌为清代界碑实物，防川村有「东方第一村」之称。门票联票约几十至百余元（2026-10 实测，以现场公示为准）。</p>
+              <h6>📷 拍照打卡点</h6>
+              <ul>
+                <li>龙虎阁瞭望层：三国同框全景，最佳视角</li>
+                <li>土字牌界碑前：历史实物打卡</li>
+                <li>望海阁：远眺图们江口，江风开阔</li>
+              </ul>
+              <h6>🍜 周边美食</h6>
+              <p>珲春市区海鲜街帝王蟹；朝鲜族荞麦冷面、打糕；防川村内有简餐。</p>
+              <h6>🗺 游览动线</h6>
+              <p>珲春市区包车约 1.5h → 龙虎阁观景（约 1h）→ 土字牌 / 望海阁（约 40min）→ 江边木栈道 → 返程顺路打卡圈河口岸外围。</p>
+            </div>
+          </details></div>
         </div>
       </article>
     </div>
@@ -445,7 +538,27 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <li><span class="t-time">14:00</span><span class="t-dot"></span><p>图们站 → 延吉西站（约 20 分钟）</p></li>
           <li><span class="t-time">16:00</span><span class="t-dot"></span><p>延吉市区自由活动 / 补网红墙夜景</p></li>
         </ul>
-        <div class="pit-box">
+        
+        <div class="fs-block">
+          <h5>🍜 本日美食 <span class="ai-est" style="margin-left:auto">2026-11 实时价</span></h5>
+          <ul class="food-day">
+            <li><span class="meal">午餐</span>图们市区 · 牛肉汤饭 / 石锅拌饭 / 冷面<span class="fp">¥20-40</span></li>
+            <li><span class="meal">晚餐</span>回延吉 · 金达莱冷面（海兰路店）配锅包肉<span class="fp">¥34/人</span></li>
+            <li><span class="meal">备选</span>顺姬冷面（长白西路店）· 当地人强烈推荐<span class="fp">¥47/人</span></li>
+          </ul>
+          <p class="src-note">价位核验：携程美食 2026-11-10 实时价；冷面 2 人一份即可，配锅包肉是延边经典吃法</p>
+        </div>
+        <div class="fs-block">
+          <h5>🏨 今晚住宿 <span class="ai-est" style="margin-left:auto">预算 ¥300-400/晚</span></h5>
+          <div class="stay-day">
+            <b>主推 · 续住 Day 1 酒店</b><span class="p-score">免搬行李</span>
+            <p>延大/网红墙商圈位置最优，晚上补网红墙夜景步行即达。</p>
+            <b>备选 · 桔子水晶（西市场网红墙店）4.8 分 / 亚朵X（百货大楼店）4.8 分</b>
+            <p>西市场商圈购物方便，约 ¥240-390/晚。</p>
+            <p class="alt">💰 返程前一天住延吉市区，去西站 / 机场均方便；入住时先确认含早。</p>
+          </div>
+        </div>
+<div class="pit-box">
           <h5>⚠️ 坑点提醒</h5>
           <ul>
             <li>· 图们口岸为边防重地，参观请遵守边防规定、勿越界</li>
@@ -476,7 +589,24 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <div class="kv"><span>开放</span><b>日间开放，时间或有调整（出行前确认）</b></div>
           <div class="kv"><span>看点</span><b>中朝界江大桥与图们口岸，站在国门前可望见对岸朝鲜南阳镇，边境感极强。</b></div>
           <div class="kv"><span>预约</span><b>以边防现场要求为准</b></div>
-          <div class="tip"><span>图们江畔步行带可远眺对岸，白天光线好，拍照注意勿朝向敏感区域。</span></div>
+          <div class="tip"><span>图们江畔步行带可远眺对岸，白天光线好，拍照注意勿朝向敏感区域。</span>
+          <details class="spot-more">
+            <summary>展开详细攻略 <svg class="chev ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+            <div class="d-body spot-detail">
+              <h6>🔍 深度看点</h6>
+              <p>中朝边境标志性口岸：图们江上界桥直通朝鲜南阳，站在国门前可清晰望见对岸朝鲜的农田与房舍，边境感极强。口岸为边防重地，参观以边防现场要求为准，勿越界、勿在敏感区域拍照。</p>
+              <h6>📷 拍照打卡点</h6>
+              <ul>
+                <li>国门正面：广角拍全「图们口岸」楼体</li>
+                <li>界江大桥侧：与大桥同框</li>
+                <li>图们江畔步道：远眺对岸朝鲜南阳</li>
+              </ul>
+              <h6>🍜 周边美食</h6>
+              <p>图们市区牛肉汤饭、石锅拌饭、冷面，半天行程内解决午餐。</p>
+              <h6>🗺 游览动线</h6>
+              <p>珲春高铁约 20 分钟到图们 → 口岸 / 国门（约 40min）→ 江畔步道（约 30min）→ 时间充裕加日光山 → 午饭后高铁回延吉。</p>
+            </div>
+          </details></div>
         </div>
       </article>
     </div>
@@ -496,7 +626,24 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <li><span class="t-time">13:30</span><span class="t-dot"></span><p>采购伴手礼（明太鱼、韩式辣酱、打糕等）</p></li>
           <li><span class="t-time">15:00</span><span class="t-dot"></span><p>前往机场/高铁站返程</p></li>
         </ul>
-        <div class="pit-box">
+        
+        <div class="fs-block">
+          <h5>🍜 本日美食 <span class="ai-est" style="margin-left:auto">2026-11 实时价</span></h5>
+          <ul class="food-day">
+            <li><span class="meal">早餐</span>东方水上市场早市（5:30-8:00）· 打糕、米肠、牛肉汤饭现做现卖<span class="fp">¥10-30</span></li>
+            <li><span class="meal">午餐</span>百年石锅饭（金达莱天池路店）· 收官餐，辣白菜石锅饭<span class="fp">¥48/人</span></li>
+            <li><span class="meal">伴手礼</span>西市场 · 明太鱼、韩式辣酱、打糕（先尝后买）<span class="fp">¥20-100</span></li>
+          </ul>
+          <p class="src-note">价位核验：携程美食 + 2026-07 水上市场新貌（850 个摊位）；早市建议 8 点前到</p>
+        </div>
+        <div class="fs-block">
+          <h5>🏨 今晚住宿</h5>
+          <div class="stay-day">
+            <b>无（当晚返程）</b>
+            <p>若改次日返程，可续住 Day 1/Day 3 酒店，或选延吉西站/机场片区（¥200-400/晚）赶早班更方便。</p>
+          </div>
+        </div>
+<div class="pit-box">
           <h5>⚠️ 坑点提醒</h5>
           <ul>
             <li>· 帽儿山台阶较多，预留 1-1.5 小时，穿舒适的鞋</li>
@@ -507,6 +654,23 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
         <div class="planb-box">
           <h5>🔀 本日 Plan B</h5>
           <p>天气差 → 民俗园室内逛+购物；返程晚 → 中午在市内吃收官餐，下午直接返程，帽儿山可略去。</p>
+          <details class="spot-more">
+            <summary>帽儿山 + 民俗园 · 展开详细攻略 <svg class="chev ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+            <div class="d-body spot-detail">
+              <h6>🔍 深度看点</h6>
+              <p>帽儿山是延吉城南山，山顶可俯瞰整座延吉城与布尔哈通河、海兰江交汇；朝鲜族民俗园是延吉旅拍核心地（旅拍约 199 元含妆造），青瓦白墙的朝鲜族传统建筑群随手出片。</p>
+              <h6>📷 拍照打卡点</h6>
+              <ul>
+                <li>帽儿山观景台：清晨逆光俯瞰全城</li>
+                <li>民俗园入口长廊：朝鲜族屋檐与光影</li>
+                <li>民俗园换装旅拍：韩剧女主角同款机位</li>
+              </ul>
+              <h6>🍜 周边美食</h6>
+              <p>民俗园距市中心打车约 5-8 元，回延大商圈吃冷面、烤串、参鸡汤；顺路可逛延吉公园。</p>
+              <h6>🗺 游览动线</h6>
+              <p>07:30 帽儿山（台阶多，预留 1-1.5h）→ 09:30 民俗园（约 2h，含旅拍）→ 11:30 午餐收官 → 13:30 西市场采购伴手礼 → 15:00 返程。</p>
+            </div>
+          </details>
         </div>
       </div>
       <div class="day-col">
@@ -530,7 +694,23 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <li><span class="t-time">10:00</span><span class="t-dot"></span><p>长白山北坡：天池 + 长白瀑布 + 温泉（门票/环保车需购）</p></li>
           <li><span class="t-time">15:00</span><span class="t-dot"></span><p>下山返延吉</p></li>
         </ul>
-        <div class="pit-box">
+        
+        <div class="fs-block">
+          <h5>🍜 本日美食 <span class="ai-est" style="margin-left:auto">2026-11 估算</span></h5>
+          <ul class="food-day">
+            <li><span class="meal">午餐</span>二道白河镇 · 铁锅炖 / 朝鲜族风味餐<span class="fp">¥40-80</span></li>
+            <li><span class="meal">小食</span>聚龙温泉边温泉煮蛋 · 上山补给<span class="fp">¥10-15</span></li>
+          </ul>
+          <p class="src-note">天池主峰 2189 米，山上风大低温，带好热水与能量补给；温泉蛋在温泉群边有售</p>
+        </div>
+        <div class="fs-block">
+          <h5>🏨 今晚住宿 <span class="ai-est" style="margin-left:auto">预算上浮 · 可选</span></h5>
+          <div class="stay-day">
+            <b>若要住 · 二道白河镇温泉酒店</b><span class="p-score">¥400-600/晚</span>
+            <p>泡温泉缓解登山疲劳；或当日往返延吉（单程约 3h）。</p>
+          </div>
+        </div>
+<div class="pit-box">
           <h5>⚠️ 坑点提醒</h5>
           <ul>
             <li>· 天池常被云雾遮蔽，能否看到全凭天气，出行前查天气预报</li>
@@ -558,47 +738,32 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
           <div class="eyebrow">火山口湖 · 中朝界山</div>
           <h4>长白山天池（北坡）</h4>
           <p class="addr">📍 长白山自然保护区北坡（延吉包车约 3h）<a class="loc-link" href="https://uri.amap.com/marker?position=128.06,42.02&name=长白山北坡" target="_blank" rel="noopener">查看位置</a></p>
-          <div class="kv"><span>门票</span><b>景区门票 + 环保车 + 天池主峰车票（提前购）</b></div>
+          <div class="kv"><span>门票</span><b>景区门票 + 环保车 + 天池主峰倒站车约 80 元/人（提前购）</b></div>
           <div class="kv"><span>海拔</span><b>天池约 2189 米（高反轻，注意保暖缓行）</b></div>
           <div class="kv"><span>看点</span><b>中朝界山火山口湖，天池 + 长白瀑布 + 聚龙温泉群，东北第一风光。</b></div>
           <div class="kv"><span>预约</span><b>公众号/OTA 提前购票</b></div>
-          <div class="tip"><span>11 月天池可能结冰封路，出行前务必确认北坡当日开放情况。</span></div>
+          <div class="tip"><span>11 月天池可能结冰封路，出行前务必确认北坡当日开放情况。</span>
+          <details class="spot-more">
+            <summary>展开详细攻略 <svg class="chev ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></summary>
+            <div class="d-body spot-detail">
+              <h6>🔍 深度看点</h6>
+              <p>中朝界山火山口湖，天池海拔 2189.1 米。北坡玩法：环保车到换乘中心 → 倒站车（约 80 元/人）过 72 道弯上主峰俯瞰天池；同游长白瀑布（落差 68 米）、聚龙温泉群、绿渊潭。门票 + 环保车 + 主峰车票需提前在公众号 / OTA 预订。</p>
+              <h6>📷 拍照打卡点</h6>
+              <ul>
+                <li>天池主峰观景台：晴天清晨最清晰</li>
+                <li>长白瀑布观景台：落差 68 米水帘</li>
+                <li>聚龙温泉：雾气蒸腾背景，温泉煮蛋</li>
+              </ul>
+              <h6>🍜 周边美食</h6>
+              <p>二道白河镇铁锅炖、朝鲜族风味餐；山上以温泉蛋与补给为主。</p>
+              <h6>🗺 游览动线</h6>
+              <p>06:30 延吉出发 → 10:00 进北坡 → 环保车到换乘中心 → 上午天气好先上主峰看天池 → 下午长白瀑布 / 绿渊潭 → 15:00 下山返延吉。</p>
+            </div>
+          </details></div>
         </div>
       </article>
     </div>
   </section>
-</section>
-
-<!-- ============ 美食 ============ -->
-<section id="foods">
-  <div class="sect-head">
-    <span class="eyebrow">Taste of Yanbian</span>
-    <h2>延边美食地图</h2>
-    <p class="lead">延吉是「东北美食天花板」，珲春则是海鲜之城。以下为当地必吃与价位参考（价格 AI 估算，随季节浮动）。</p>
-  </div>
-  <div class="food-list">
-    <div class="food-item"><span class="f-idx">1</span><div><b>延吉冷面</b><p>顺姬/金达莱冷面，荞麦面+冰汤，酸甜口，配锅包肉一绝</p></div><span class="f-price">约 20-30 元</span></div>
-    <div class="food-item"><span class="f-idx">2</span><div><b>韩式烤肉</b><p>延吉烤肉讲究火候与蘸料，五花肉/牛肉拼盘</p></div><span class="f-price">人均 80-120 元</span></div>
-    <div class="food-item"><span class="f-idx">3</span><div><b>珲春帝王蟹 / 海鲜</b><p>珲春近俄朝港口，帝王蟹、板蟹、俄式海鲜，鲜活价优</p></div><span class="f-price">人均 150-300 元</span></div>
-    <div class="food-item"><span class="f-idx">4</span><div><b>石锅拌饭 / 全州拌饭</b><p>延吉韩式主食代表，配酱汤更地道</p></div><span class="f-price">约 25-40 元</span></div>
-    <div class="food-item"><span class="f-idx">5</span><div><b>参鸡汤 / 脊骨土豆汤</b><p>暖身汤品，朝鲜族传统滋补</p></div><span class="f-price">人均 50-80 元</span></div>
-    <div class="food-item"><span class="f-idx">6</span><div><b>米肠 / 打糕 / 韩式辣酱</b><p>延吉伴手礼三件套，辣酱、明太鱼干、打糕</p></div><span class="f-price">小吃 10-30 元</span></div>
-  </div>
-</section>
-
-<!-- ============ 住宿 ============ -->
-<section id="stays">
-  <div class="sect-head">
-    <span class="eyebrow">Where to Stay</span>
-    <h2>住宿建议</h2>
-    <p class="lead">延吉住 2 晚（Day1、Day3/4），珲春住 1 晚（Day2），高铁站与市区配套齐全。</p>
-  </div>
-  <div class="stay-list">
-    <div class="stay-item"><div class="stay-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><b>延吉 · 大学城/人民公园商圈</b></div><p>近网红墙与韩餐街，晚上热闹，适合美食型游客。价位约 250-450 元/晚（旺季浮动），建议提前 3-7 天预订。</p></div>
-    <div class="stay-item"><div class="stay-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><b>延吉西站/机场片区</b></div><p>返程前一晚可选，赶早班车机更方便。价位约 200-400 元/晚。</p></div>
-    <div class="stay-item"><div class="stay-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><b>珲春 · 珲春站/市区</b></div><p>Day2 住珲春，方便次日去图们。价位约 180-350 元/晚，淡季更便宜，可现场比价。</p></div>
-  </div>
-  <p class="notice">住宿价格随节假日与淡旺季明显浮动，以上为 2026-11 估算区间，预订以 OTA（携程/美团/飞猪）实时房价为准。</p>
 </section>
 
 <!-- ============ 花费 ============ -->
@@ -611,10 +776,10 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
   <div class="cost-grid">
     <div class="cost-row"><b>大交通（北京⇀延吉 往返）</b><span>高铁约 1000-1300 / 飞机约 1400-2400</span></div>
     <div class="cost-row"><b>区间交通（高铁+包车/打车）</b><span>约 200-400</span></div>
-    <div class="cost-row"><b>住宿 3 晚</b><span>约 700-1200（人均）</span></div>
+    <div class="cost-row"><b>住宿 3 晚（300-400 元/晚）</b><span>约 450-600（人均）</span></div>
     <div class="cost-row"><b>餐饮（含珲春海鲜）</b><span>约 700-1000</span></div>
     <div class="cost-row"><b>门票/景交（防川+长白山可选）</b><span>约 200-500</span></div>
-    <div class="cost-row total"><b>合计（不含购物）</b><span>约 2200-2800 元/人</span></div>
+    <div class="cost-row total"><b>合计（不含购物）</b><span>约 2000-2600 元/人</span></div>
   </div>
   <p class="notice">加长白山一日约 +400-600 元/人（门票+环保车+包车分摊）。</p>
 </section>
@@ -636,7 +801,8 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:26px 16px 40px
     <ul class="src-list" style="margin-top:10px">
       <li>· <span class="realtime">车次/航班/票价</span> 随时浮动 —— 出行前以 12306 / 航司实时为准</li>
       <li>· <span class="realtime">防川/图们口岸/长白山 开放与票价</span> —— 出行前以官方公告为准</li>
-      <li>· <span class="ai-est">里程、耗时、餐饮价位、住宿价位</span> —— 为 2026-11 估算，供参考</li>
+      <li>· <span class="realtime">酒店价位</span>（携程 / 首旅如家官网 2026-11 实时价）· <span class="realtime">餐饮价位</span>（携程美食 2026-11 实时价）</li>
+      <li>· <span class="ai-est">里程、耗时</span> —— 为 2026-11 估算，供参考</li>
       <li>· 11 月延边气温约 -4~6℃，早晚冷，请关注当地天气预报备装</li>
     </ul>
     <p class="notice">一键复核：铁路 <a href="https://www.12306.cn" target="_blank" rel="noopener">12306</a> · 防川景区 · 长白山景区 · 航司官网。未能实时核验的信息请出行前二次确认。</p>
